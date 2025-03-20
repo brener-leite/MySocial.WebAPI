@@ -34,7 +34,7 @@ internal class PostRepository
     }
     public async Task DeleteAsync(Guid id)
     {
-        var post = await _context.Posts.FindAsync(id) ?? throw new DirectoryNotFoundException($"Post com ID {id} não encontrado");
+        var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == id) ?? throw new Exception($"Post with ID {id} not found");
 
         post.Delete();
         await _context.SaveChangesAsync();
