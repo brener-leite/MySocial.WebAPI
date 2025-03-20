@@ -1,0 +1,32 @@
+# .NET
+**/[Bb]in/
+**/[Oo]bj/
+*.user
+*.suo
+*.cache
+*.nuget.props
+*.nuget.targets
+.nuget/
+**/packages/
+project.lock.json
+*.nupkg
+
+# IDEs
+.vs/
+.vscode/
+.idea/
+*.sln.iml
+*.DotSettings
+
+# Build
+**/wwwroot/dist/
+**/node_modules/
+artifacts/
+
+# Local db
+**/pgdata/
+
+# Temporary files
+*.swp
+*.swo
+*~

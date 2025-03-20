@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MySocial.Domain.Entities;
+using MySocial.Domain.Exceptions;
 using MySocial.Infrastructure.Data;
 
 namespace MySocial.Infrastructure.Repositories;
@@ -34,7 +35,7 @@ internal class PostRepository
     }
     public async Task DeleteAsync(Guid id)
     {
-        var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == id) ?? throw new Exception($"Post with ID {id} not found");
+        var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == id) ?? throw new NotFoundException($"Post with ID {id} not found");
 
         post.Delete();
         await _context.SaveChangesAsync();
