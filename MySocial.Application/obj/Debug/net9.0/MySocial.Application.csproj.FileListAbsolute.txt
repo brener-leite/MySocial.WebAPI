@@ -1,0 +1,15 @@
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\bin\Debug\net9.0\MySocial.Application.deps.json
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\bin\Debug\net9.0\MySocial.Application.dll
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\bin\Debug\net9.0\MySocial.Application.pdb
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\bin\Debug\net9.0\MySocial.Domain.dll
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\bin\Debug\net9.0\MySocial.Domain.pdb
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\MySocial.Application.csproj.AssemblyReference.cache
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\MySocial.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\MySocial.Application.AssemblyInfoInputs.cache
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\MySocial.Application.AssemblyInfo.cs
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\MySocial.Application.csproj.CoreCompileInputs.cache
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\MySocial.A1EB2DC7.Up2Date
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\MySocial.Application.dll
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\refint\MySocial.Application.dll
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\MySocial.Application.pdb
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Application\obj\Debug\net9.0\ref\MySocial.Application.dll

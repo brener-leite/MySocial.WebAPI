@@ -1,0 +1,11 @@
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\bin\Debug\net9.0\MySocial.Domain.deps.json
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\bin\Debug\net9.0\MySocial.Domain.dll
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\bin\Debug\net9.0\MySocial.Domain.pdb
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\obj\Debug\net9.0\MySocial.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\obj\Debug\net9.0\MySocial.Domain.AssemblyInfoInputs.cache
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\obj\Debug\net9.0\MySocial.Domain.AssemblyInfo.cs
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\obj\Debug\net9.0\MySocial.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\obj\Debug\net9.0\MySocial.Domain.dll
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\obj\Debug\net9.0\refint\MySocial.Domain.dll
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\obj\Debug\net9.0\MySocial.Domain.pdb
+C:\Users\Brener\source\repos\MySocial.WebAPI\MySocial.Domain\obj\Debug\net9.0\ref\MySocial.Domain.dll
