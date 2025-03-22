@@ -1,4 +1,6 @@
-﻿namespace MySocial.Domain.Entities;
+﻿using MySocial.Domain.Exceptions;
+
+namespace MySocial.Domain.Entities;
 
 public class Post
 {
@@ -9,6 +11,7 @@ public class Post
     public bool IsDeleted { get; private set; }
     public User User { get; private set; }
     public Guid UserId { get; private set; }
+    public ICollection<Comment> Comments { get; private set; }
 
     public Post(string content, User user)
     {
@@ -18,6 +21,17 @@ public class Post
         Content = content;
         CreatedAt = DateTime.UtcNow;
         IsDeleted = false;
+        Comments = [];
+    }
+
+    public void AddComment(Comment comment)
+    {
+        if (comment is null)
+        {
+            throw new DomainException("Comment cannot be null");
+        }
+
+        Comments.Add(comment);
     }
 
     public void UpdateContent(string content)
