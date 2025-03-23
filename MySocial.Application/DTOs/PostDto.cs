@@ -9,7 +9,7 @@ public class PostDto
     public string AuthorName { get; set; }
     public int CommentsCount { get; set; }
 
-    public static explicit operator PostDto(Post post)
+    public static PostDto FromEntity(Post post)
     {
         return new PostDto
         {

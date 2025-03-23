@@ -17,15 +17,14 @@ public class GetPostByIdQueryHandler : IRequestHandler<GetPostByIdQuery, GetPost
     {
         var post = await _postRepository.GetByIdAsync(request.PostId) ?? throw new NotFoundException($"Post {request.PostId} not found");
 
-        PostDto postDto = (PostDto)post;
+        var dto = PostDto.FromEntity(post);
 
-        return new GetPostByIdQueryResponse
-        (
-            Id: postDto.Id,
-            Content: postDto.Content,
-            CreatedAt: postDto.CreatedAt,
-            AuthorName: postDto.AuthorName,
-            CommentsCount: postDto.CommentsCount
+        return new GetPostByIdQueryResponse(
+            dto.Id,
+            dto.Content,
+            dto.CreatedAt,
+            dto.AuthorName,
+            dto.CommentsCount
         );
     }
 }
