@@ -3,11 +3,11 @@
 namespace MySocial.Application.DTOs;
 public class PostDto
 {
-    Guid Id { get; set; }
-    string Content { get; set; }
-    DateTime CreatedAt { get; set; }
-    string AuthorName { get; set; }
-    int CommentsCount { get; set; }
+    public Guid Id { get; set; }
+    public string Content { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public string AuthorName { get; set; }
+    public int CommentsCount { get; set; }
 
     public static explicit operator PostDto(Post post)
     {
