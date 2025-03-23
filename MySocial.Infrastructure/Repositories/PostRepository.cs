@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MySocial.Domain.Entities;
 using MySocial.Domain.Exceptions;
+using MySocial.Domain.Interfaces;
 using MySocial.Infrastructure.Data;
 
 namespace MySocial.Infrastructure.Repositories;
-internal class PostRepository
+public class PostRepository : IPostRepository
 {
     private readonly AppDbContext _context;
 
@@ -15,23 +16,34 @@ internal class PostRepository
 
     public async Task<Post?> GetByIdAsync(Guid id)
     {
-        var post = await _context.Posts.FindAsync(id);
-        return post;
+        return await _context.Posts
+            .Include(p => p.User)
+            .Include(p => p.Comments)
+            .Where(p => !p.IsDeleted)
+            .FirstOrDefaultAsync(p => p.Id == id);
+    }
+    public async Task<IEnumerable<Post>> GetByUserIdAsync(Guid userId)
+    {
+        return await _context.Posts
+            .Include(p => p.User)
+            .Include(p => p.Comments)
+            .Where(p => p.UserId == userId && !p.IsDeleted)
+            .OrderByDescending(p => p.CreatedAt)
+            .ToListAsync();
+    }
+    public async Task<IEnumerable<Post>> GetAllAsync()
+    {
+        return await _context.Posts
+            .Include(p => p.User)
+            .Include(p => p.Comments)
+            .Where(p => !p.IsDeleted)
+            .OrderByDescending(p => p.CreatedAt)
+            .ToListAsync();
     }
     public async Task AddAsync(Post post)
     {
         await _context.Posts.AddAsync(post);
         await _context.SaveChangesAsync();
-    }
-    public async Task<IEnumerable<Post>> GetByUserIdAsync(Guid userId)
-    {
-        var posts = await _context.Posts.Where(p => p.UserId == userId).ToListAsync();
-        return posts;
-    }
-    public async Task<IEnumerable<Post>> GetAllAsync()
-    {
-        var posts = await _context.Posts.ToListAsync();
-        return posts;
     }
     public async Task DeleteAsync(Guid id)
     {
