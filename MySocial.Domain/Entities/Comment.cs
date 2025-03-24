@@ -14,7 +14,7 @@ public class Comment
     public Guid UserId { get; private set; }
     public User User { get; private set; }
 
-    public Comment(string content, Post post, User user)
+    public Comment(string content, User user, Post post)
     {
         Id = Guid.NewGuid();
         Content = content;

@@ -12,8 +12,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Comment\Queries\" />
-    <Folder Include="Features\Post\Queries\GetAllPosts\" />
-    <Folder Include="Features\Post\Queries\GetPostsByUser\" />
     <Folder Include="Features\User\Queries\GetUserById\" />
   </ItemGroup>
 

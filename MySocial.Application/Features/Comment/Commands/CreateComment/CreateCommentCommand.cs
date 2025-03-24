@@ -5,4 +5,4 @@ public record CreateCommentCommand(
     Guid PostId,
     Guid UserId,
     string Content
-) : IRequest<Guid>;
+) : IRequest<CreateCommentCommandResponse>;
