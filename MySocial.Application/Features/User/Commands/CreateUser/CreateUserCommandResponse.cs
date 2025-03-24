@@ -1,6 +1,5 @@
 ﻿namespace MySocial.Application.Features.User.Commands.CreateUser;
-public record UserCreatedResponse(
-    Guid Id,
+public record CreateUserCommandResponse(
     string Name,
     string Email
 );

@@ -7,7 +7,7 @@ public class User
     public string Email { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public string? Bio { get; private set; }
-    public List<Post> Posts { get; private set; } = new();
+    public IEnumerable<Post> Posts { get; private set; }
 
     public User(string name, string email, string? bio = null)
     {
@@ -16,6 +16,7 @@ public class User
         Email = email;
         Bio = bio;
         CreatedAt = DateTime.UtcNow;
+        Posts = [];
     }
 
     public void UpdateProfile(string? name = null, string? bio = null)

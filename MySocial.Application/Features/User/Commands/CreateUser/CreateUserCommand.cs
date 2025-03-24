@@ -5,4 +5,4 @@ public record CreateUserCommand(
     string Name,
     string Email,
     string? Bio = null
-    ) : IRequest<Guid>;
+    ) : IRequest<CreateUserCommandResponse>;
