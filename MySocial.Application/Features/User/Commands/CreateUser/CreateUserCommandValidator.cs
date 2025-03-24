@@ -6,11 +6,11 @@ public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
     public CreateUserCommandValidator()
     {
         RuleFor(x => x.Name)
-            .NotEmpty().WithMessage("Nome é obrigatório")
-            .MaximumLength(100).WithMessage("Nome deve ter até 100 caracteres");
+            .NotEmpty().WithMessage("User name is required")
+            .MaximumLength(100).WithMessage("User name must be up to 100 characters long");
 
         RuleFor(x => x.Email)
-            .NotEmpty().WithMessage("Email é obrigatório")
-            .EmailAddress().WithMessage("Formato de email inválido");
+            .NotEmpty().WithMessage("User email is required")
+            .EmailAddress().WithMessage("Email format invalid");
     }
 }
