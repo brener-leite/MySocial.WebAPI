@@ -11,8 +11,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IPostRepository, PostRepository>();
 
-// Adiciona serviços da aplicação
+// Handlers
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(User.Commands.CreateUser.CreateUserCommand).Assembly));
 
 builder.Services.AddControllers();
