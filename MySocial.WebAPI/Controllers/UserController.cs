@@ -1,22 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MySocial.Application.Services;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using MySocial.Application.Features.User.Commands.CreateUser;
 
 namespace MySocial.WebAPI.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 public class UserController : ControllerBase
 {
-    private readonly UserService _userService;
-
-    public UserController(UserService userService)
+    private readonly IMediator _mediator;
+    public UserController(IMediator mediator)
     {
-        _userService = userService;
+        _mediator = mediator;
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddUser([FromBody] string name)
+    public async Task<IActionResult> CreateUser([FromBody] CreateUserCommand command)
     {
-        await _userService.AddUser(name);
-        return Ok();
+        var user = await _mediator.Send(command);
+        return CreatedAtAction(nameof(CreateUser), user);
     }
 }
